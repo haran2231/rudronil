@@ -1,0 +1,17 @@
+.single-blog-container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .single-blog-container img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+  }
+  
+  .single-blog-container p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  

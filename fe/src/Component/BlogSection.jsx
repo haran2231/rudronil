@@ -1,5 +1,8 @@
 import React, { useRef, useState } from "react";
 import "./BlogSection.css"; // Import CSS for styling
+import { useNavigate } from "react-router-dom";
+
+const navigate = useNavigate();
 
 // Import local images
 import blog1 from "../assets/l1.jpg";
@@ -70,13 +73,17 @@ const BlogSection = () => {
   };
 
   // Open Modal with Blog Details
-  const openBlogModal = (blog) => {
-    setSelectedBlog(blog);
-  };
+  // const openBlogModal = (blog) => {
+  //   setSelectedBlog(blog);
+  // };
 
-  // Close Modal
-  const closeModal = () => {
-    setSelectedBlog(null);
+  // // Close Modal
+  // const closeModal = () => {
+  //   setSelectedBlog(null);
+  // };
+
+  const openBlogPage = (id) => {
+    navigate(`/blog/${id}`); // Navigate to blog page
   };
 
   return (
@@ -93,7 +100,7 @@ const BlogSection = () => {
             <img src={blog.image} alt={blog.title} />
             <h3>{blog.title}</h3>
             <p>{blog.description}</p>
-            <button onClick={() => openBlogModal(blog)}>Read More</button>
+            <button onClick={() => openBlogPage(blog.id)}>Read More</button>
           </div>
         ))}
       </div>

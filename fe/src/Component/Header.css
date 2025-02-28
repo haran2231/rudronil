@@ -5,6 +5,15 @@
     padding: 0px 20px;
     flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
+
+.main_header{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: midnightblue;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
   
 /* Ensures the sections stay flexible */
 .header_one,

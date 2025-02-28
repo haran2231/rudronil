@@ -112,6 +112,7 @@
   
   .scroll-button.left {
     left: 10px;
+    z-index: 10;
   }
   
   .scroll-button.right {

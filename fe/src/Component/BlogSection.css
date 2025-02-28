@@ -254,4 +254,11 @@
   }
   
   /* Keep your existing styles */
-  
+
+
+@media (max-width: 480px) {
+  .blog-card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+}

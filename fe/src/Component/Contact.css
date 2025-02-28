@@ -57,7 +57,7 @@
     margin-bottom: 15px;
   }
 
-  .contact-info h2, p{
+  .contact-info h2{
     text-align: center;
   }
 
@@ -65,7 +65,7 @@
     text-align: center;
   }
   
-  
+
   .contact-info p {
     display: flex;
     align-items: center;

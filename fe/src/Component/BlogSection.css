@@ -144,12 +144,13 @@
     background: white;
     padding: 20px;
     border-radius: 10px;
-    width: 60%;
+    width: 88%;
     text-align: center;
     position: relative;
     color: black;
     transform: translateY(-20px);
     transition: transform 0.3s ease-in-out;
+    margin-top: 134px;
   }
   
   .modal.show .modal-content {

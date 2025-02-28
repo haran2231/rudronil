@@ -45,8 +45,8 @@ const Footer = () => {
           <h3>Contact Us</h3>
           <p>📍 MJT Building, First Floor 9-A, </p>
             <p>Bharathiyar Road, P.N. Palayam Coimbatore-641 037</p>
-          <p>📞 +91 98765 43210</p>
-          <p>📧 contact@example.com</p>
+          <p>📞 +91 89399 41406</p>
+          <p>📧 naveen.sankar@rudronilfinserv.com</p>
         </div>
       </div>
 

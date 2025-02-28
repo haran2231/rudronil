@@ -20,7 +20,7 @@ function StatsSection() {
         </div>
         <div className="stat-item">
           <h2>
-            <CountUp start={0} end={22100000000} duration={3.5} separator="," />
+            <CountUp start={0} end={22100000} duration={3.5} separator="," />
           </h2>
           <p>Disbursed Amount</p>
         </div>

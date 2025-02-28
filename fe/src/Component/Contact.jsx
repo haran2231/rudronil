@@ -171,7 +171,7 @@ const ContactForm = () => {
         </form>
       </div>
 
-      {/* Right Side - Address Details */}
+      {/* Right Side - Address Details
       <div className="contact-info">
         <h2>Our Office</h2>
         <p><FaMapMarkerAlt /> MJT Building, First Floor</p>
@@ -181,7 +181,7 @@ const ContactForm = () => {
         <h3>Contact Details</h3>
         <p><FaPhoneAlt /> +91 98765 43210</p>
         <p><FaEnvelope /> info@example.com</p>
-      </div>
+      </div> */}
     </div>
   );
 };

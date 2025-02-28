@@ -1,0 +1,267 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+  
+/* Ensures the sections stay flexible */
+.header_one,
+.header_two {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows items to wrap */
+    align-items: center;
+}
+  
+.header_three {
+    font-size: 24px;
+    align-items: center;
+}
+  
+.nav_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    background-color: white;
+    color: black;
+    position: relative;
+}
+  
+.menu_list a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+}
+  
+.menu_list {
+    padding: 0 12px;
+}
+  
+.btn_quote {
+    padding: 10px 15px;
+    background-color: midnightblue;
+    border-radius: 25px;
+}
+  
+.btn_quote a {
+    text-decoration: none;
+    color: white;
+}
+  
+/* Burger Menu */
+.burger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+}
+
+.btn_quote_mobile{
+    display: none;
+}
+
+  
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header {
+      display: none;
+    }
+  
+    .nav_menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      position: relative;
+    }
+  
+    /* Sidebar Menu - Slides in from Right */
+    .menu_list {
+      position: fixed;
+      top: 88px;
+      right: -100%; /* Start off-screen */
+      height: 55vh;
+      width: 250px;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      gap: 15px;
+      padding: 20px;
+      margin-right: 8px;
+      transition: right 0.3s ease-in-out;
+      box-shadow: -3px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    .menu_list.open {
+      right: 0; /* Slide in */
+    }
+  
+    .burger {
+      display: block;
+    }
+  
+    .btn_quote {
+      display: none;
+    }
+
+     /* Get Quote button inside mobile menu */
+    .btn_quote_mobile {
+      margin-top: 20px;
+      padding: 10px 15px;
+      background-color: midnightblue;
+      border-radius: 25px;
+      text-align: center;
+      display: block;
+    }
+
+    .btn_quote_mobile a {
+      text-decoration: none;
+      color: white;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        display: none;
+    }
+}
+
+
+
+
+/* Keep your existing styles */
+
+/* Header Slide Down Animation */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header {
+  animation: slideDown 0.5s ease-in-out;
+}
+
+/* Button Hover Effect */
+@keyframes btnGlow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+  }
+}
+
+.btn_quote:hover,
+.btn_quote_mobile:hover {
+  animation: btnGlow 0.8s infinite alternate;
+}
+
+/* Burger Menu - Smooth Slide In */
+@keyframes menuSlide {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+.menu_list.open {
+  animation: menuSlide 0.5s ease-in-out;
+}
+
+/* Burger Icon - Rotation Effect */
+@keyframes burgerSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+.burger:hover {
+  animation: burgerSpin 0.5s ease-in-out;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header {
+    display: none;
+  }
+
+  .nav_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+  }
+
+  /* Sidebar Menu - Slides in from Right */
+  .menu_list {
+    position: fixed;
+    top: 88px;
+    right: -100%; /* Start off-screen */
+    height: 55vh;
+    width: 250px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 15px;
+    padding: 20px;
+    margin-right: 8px;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -3px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  .menu_list.open {
+    right: 0; /* Slide in */
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .btn_quote {
+    display: none;
+  }
+
+  /* Get Quote button inside mobile menu */
+  .btn_quote_mobile {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: midnightblue;
+    border-radius: 25px;
+    text-align: center;
+    display: block;
+  }
+
+  .btn_quote_mobile a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    display: none;
+  }
+}
+

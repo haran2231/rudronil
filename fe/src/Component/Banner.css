@@ -1,0 +1,134 @@
+.banner {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  margin-top: 2px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 15%;
+  left: 23%;
+  transform: translateX(-50%);
+  /* background: rgba(0, 0, 0, 0.6); */
+  padding: 70px 40px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: midnightblue;
+}
+
+.overlay_contact {
+  background-color: white;
+  padding: 5px 0px;
+  width: 36%;
+  border-radius: 37px;
+}
+
+.overlay_contact a {
+  text-decoration: none;
+  color: black;
+}
+
+
+/* Keep your existing styles */
+
+/* Banner Slide - Fade & Zoom In Animation */
+@keyframes fadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Apply animation to each slide */
+.slide {
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  transform: scale(1.05);
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+  animation: fadeZoom 1.2s ease-in-out;
+}
+
+/* Overlay Text - Smooth Slide Up */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.overlay {
+  animation: slideUp 1s ease-in-out;
+}
+
+/* Overlay Contact Button - Bounce Effect */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.overlay_contact {
+  animation: bounce 1s ease-in-out infinite alternate;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .overlay {
+    font-size: 20px;
+    padding: 50px 30px;
+  }
+
+  .overlay_contact {
+    width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .overlay {
+    font-size: 18px;
+    padding: 40px 20px;
+  }
+
+  .overlay_contact {
+    width: 90%;
+  }
+}

@@ -1,0 +1,167 @@
+.services {
+    text-align: center;
+    padding: 50px 20px;
+    background: white;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: midnightblue;
+  }
+  
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .service-card {
+    background: midnightblue;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+  }
+  
+  .service-card img {
+    width: 35%;
+    height: 58px;
+    object-fit: cover;
+    margin: 25px 0 0 0;
+    border-radius: 14px;
+  }
+  
+  .service-card h3 {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .service-card p {
+    font-size: 14px;
+    color: white;
+    padding: 0 15px;
+    margin-top: -10px;
+  }
+  
+  .service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .service-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  
+    .service-card h3 {
+      font-size: 16px;
+    }
+  
+    .service-card p {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .service-grid {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+  
+    .service-card img {
+      height: 180px;
+    }
+  
+    .service-card h3 {
+      font-size: 14px;
+    }
+  
+    .service-card p {
+      font-size: 12px;
+    }
+  }
+  
+
+  /* Keep your existing styles */
+
+/* Loading Animation - Fade & Scale Up */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Service Section Animation */
+.services {
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+/* Service Cards Animation - Load One by One */
+.service-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease-in-out forwards;
+}
+
+/* Delaying each card for a staggered effect */
+.service-card:nth-child(1) { animation-delay: 0.2s; }
+.service-card:nth-child(2) { animation-delay: 0.4s; }
+.service-card:nth-child(3) { animation-delay: 0.6s; }
+.service-card:nth-child(4) { animation-delay: 0.8s; }
+.service-card:nth-child(5) { animation-delay: 1s; }
+
+/* Service Card Hover Effect */
+.service-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Smooth Image Appear */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.service-card img {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .service-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .service-card {
+    animation-duration: 0.6s;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .service-card img {
+    height: 150px;
+  }
+}

@@ -1,0 +1,134 @@
+.footer {
+    background: white;
+    color: black;
+    padding: 40px 0 0 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border-top: 1px solid #ddd;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    gap: 20px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin: 8px 0;
+  }
+  
+  .footer-links ul li a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .footer-subscribe input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: 200px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .footer-subscribe button {
+    background: midnightblue;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .footer-contact p {
+    margin: 8px 0;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    padding: 15px 0;
+    background: midnightblue;
+    border-top: 1px solid #ddd;
+    color: white;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  
+
+  /* Keep your existing styles */
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Button Hover Animation */
+  @keyframes buttonHover {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 5px rgba(25, 25, 112, 0.3);
+    }
+    100% {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(25, 25, 112, 0.7);
+    }
+  }
+  
+  /* Footer Fade-in Effect */
+  .footer {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  /* Subscribe Input Field Focus */
+  .footer-subscribe input:focus {
+    outline: none;
+    border-color: midnightblue;
+    box-shadow: 0 0 5px rgba(25, 25, 112, 0.5);
+  }
+  
+  /* Subscribe Button Hover Effect */
+  .footer-subscribe button:hover {
+    animation: buttonHover 0.3s ease-in-out;
+  }
+  
+  /* Footer Links Hover Effect */
+  .footer-links ul li a:hover {
+    text-decoration: underline;
+    color: midnightblue;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /* Footer Bottom Animation */
+  .footer-bottom {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  

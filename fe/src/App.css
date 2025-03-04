@@ -58,5 +58,20 @@ html {
   .service-card h3{
     padding: 0;
   }
+  .stat-item {
+    flex: 0;
+    min-width: 0px;
+    margin: 10px;
+    margin-bottom: 0;
 }
+.stat-item p{
+    font-size: 2.2rem !important;
+}
+
+.stat-item span{
+    font-size: 34px !important;
+}
+}
+
+
 

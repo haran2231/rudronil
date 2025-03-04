@@ -62,6 +62,7 @@
 
   .social-footer{
     display: flex;
+    justify-content: center;
   }
   
   /* Responsive */

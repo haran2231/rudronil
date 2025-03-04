@@ -1,5 +1,8 @@
 import { useState } from "react";
 import "./Footer.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMobileAlt, faEnvelope, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -47,6 +50,15 @@ const Footer = () => {
             <p>Bharathiyar Road, P.N. Palayam Coimbatore-641 037</p>
           <p>📞 +91 89399 41406</p>
           <p>📧 naveen.sankar@rudronilfinserv.com</p>
+          <p>
+                      <FontAwesomeIcon icon={faMobileAlt} /> +91 89399 41406
+                    </p>
+                    <p>
+                      <FontAwesomeIcon icon={faMobileAlt} /> 0422 4541450
+                    </p>
+                    <p>
+                      <FontAwesomeIcon icon={faEnvelope} /> naveen.sankar@rudronilfinserv.com
+                    </p>
         </div>
       </div>
 

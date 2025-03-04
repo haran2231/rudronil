@@ -225,6 +225,10 @@
     .map-container {
       height: 300px; /* Adjust height for smaller screens */
     }
+
+    .contact-container{
+      padding: 65px 10px;
+    }
   }
 .leaflet-pane{
   width: 100px;

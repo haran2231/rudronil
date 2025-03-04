@@ -209,9 +209,9 @@
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  /* .header {
+  .header {
     display: none;
-  } */
+  }
 
   .nav_menu {
     display: flex;

@@ -76,10 +76,10 @@
   
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .header {
+    /* .header {
       display: none;
     }
-  
+   */
     .nav_menu {
       display: flex;
       justify-content: space-between;
@@ -134,11 +134,11 @@
     }
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
     .header {
         display: none;
     }
-}
+} */
 
 
 
@@ -209,9 +209,9 @@
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .header {
+  /* .header {
     display: none;
-  }
+  } */
 
   .nav_menu {
     display: flex;
@@ -269,7 +269,7 @@
 }
 
 @media (max-width: 1024px) {
-  .header {
+  .header_one {
     display: none;
   }
 }

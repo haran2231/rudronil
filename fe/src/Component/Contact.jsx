@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa"; // FontAwesome Icons
 import "./Contact.css"; // Import CSS file
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 const ContactForm = () => {
+  const position = [11.0168, 76.9558];
   const [formData, setFormData] = useState({
     name: "",
     mobile: "",
@@ -24,8 +26,8 @@ const ContactForm = () => {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    if(!checked){
-      alert('hg')
+    if (!checked) {
+      alert("hg");
     }
   };
 
@@ -33,12 +35,15 @@ const ContactForm = () => {
     setIsChecked(e.target.checked);
   };
 
-  
   const validateForm = () => {
     let errors = {};
     if (!formData.name.trim()) errors.name = "Full Name is required";
-    if (!formData.mobile.match(/^\d{10}$/)) errors.mobile = "Enter a valid 10-digit mobile number";
-    if (!formData.email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/)) errors.email = "Enter a valid email address";
+    if (!formData.mobile.match(/^\d{10}$/))
+      errors.mobile = "Enter a valid 10-digit mobile number";
+    if (
+      !formData.email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/)
+    )
+      errors.email = "Enter a valid email address";
     if (!formData.city.trim()) errors.city = "City is required";
     if (!formData.loanType) errors.loanType = "Please select a loan type";
     if (!formData.message.trim()) errors.message = "Message cannot be empty";
@@ -48,7 +53,7 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (validateForm()) {
       try {
         const response = await fetch("https://rudronil-1.onrender.com/submit", {
@@ -58,7 +63,7 @@ const ContactForm = () => {
           },
           body: JSON.stringify(formData),
         });
-  
+
         const result = await response.json();
         if (response.ok) {
           alert("Form submitted successfully!");
@@ -80,7 +85,6 @@ const ContactForm = () => {
       }
     }
   };
-  
 
   return (
     <div className="contact-container">
@@ -169,6 +173,45 @@ const ContactForm = () => {
             Submit
           </button>
         </form>
+      </div>
+
+      <div>
+        <div className="board">
+          <h1>BOARD MEMBERS</h1>
+
+          <div className="board-members">
+            <div className="Board-1">
+              <p>Naveen</p>
+              <p>CEO & Founder</p>
+              <p>
+                <FaEnvelope /> info@example.com
+              </p>
+            </div>
+
+            <div className="Board-2">
+              <p>Naveen</p>
+              <p>CEO & Founder</p>
+              <p>
+                <FaEnvelope /> info@example.com
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="map-container">
+          <MapContainer
+            center={position}
+            zoom={13}
+            style={{ width: "100%", height: "100%" }}
+          >
+            <TileLayer
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            />
+            <Marker position={position}>
+              <Popup>We are here! 📍</Popup>
+            </Marker>
+          </MapContainer>
+        </div>
       </div>
 
       {/* Right Side - Address Details

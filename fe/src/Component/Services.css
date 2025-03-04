@@ -165,3 +165,38 @@
     height: 150px;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.service-card h3{
+  padding: 0;
+}
+
+path{
+  color: white;
+}
+
+
+.service-card svg{
+  margin-top: 15px;
+}
+
+/* Responsive text sizes for mobile screens */
+@media screen and (max-width: 768px) {
+
+.service-card h3{
+  padding: 0;
+}
+}
+
+/* Even smaller screens */
+@media screen and (max-width: 480px) {
+
+
+.service-card h3{
+  padding: 0;
+}
+}
+

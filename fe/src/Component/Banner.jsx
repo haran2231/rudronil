@@ -1,38 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./Banner.css";
-import slide1 from "../assets/r1.jpg"; 
-import slide2 from "../assets/r2.jpeg"; 
-import slide3 from "../assets/r3.jpeg"; 
+import myVideo from "../assets/bannervideo.mp4";
 
-const images = [
-  { url: slide3, text: "Welcome to Rudronil Finserv!!" },
-];
 
 function Banner() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % images.length);
-    }, 5000); // Auto-slide every 5 seconds
-
-    return () => clearInterval(interval); // Cleanup
-  }, []);
-
   return (
     <div className="banner">
-      {images.map((image, index) => (
-        <div
-          key={index}
-          className={`slide ${index === currentSlide ? "active" : ""}`}
-          style={{ backgroundImage: `url(${image.url})` }}
-        >
-          <div className="overlay">
-            <h2>{image.text}</h2>
-            <p className="overlay_contact"><a href="#contact" onClick={() => scrollToSection("contact")}>Contact US</a></p>
-          </div>
-        </div>
-      ))}
+      <video autoPlay loop muted className="banner-video">
+        <source src={myVideo} type="video/mp4" />
+      </video>
+
+      <div className="overlay">
+        <h2>Welcome to Rudronil Finserv!!</h2>
+        <p className="overlay_contact">
+          <a href="#contact">Contact Us</a>
+        </p>
+      </div>
     </div>
   );
 }

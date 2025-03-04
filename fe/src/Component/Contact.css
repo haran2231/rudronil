@@ -1,11 +1,21 @@
 .contact-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background-color: midnightblue;
     color: white;
     padding: 40px;
     flex-wrap: wrap;
+  }
+
+  .board h1{
+    color: white;
+  }
+
+  .board-members{
+    display: flex;
+    justify-content: space-between;
+    
   }
   
   .contact-form {
@@ -203,3 +213,21 @@
     }
   }
   
+  .map-container {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden; /* Prevents extra scrolling */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .map-container {
+      height: 300px; /* Adjust height for smaller screens */
+    }
+  }
+.leaflet-pane{
+  width: 100px;
+  position: relative;
+  outline-style: none;
+}  

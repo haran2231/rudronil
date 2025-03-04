@@ -50,14 +50,15 @@ const Footer = () => {
             <p>Bharathiyar Road, P.N. Palayam Coimbatore-641 037</p>
           <p>📞 +91 89399 41406</p>
           <p>📧 naveen.sankar@rudronilfinserv.com</p>
-          <p>
-                      <FontAwesomeIcon icon={faMobileAlt} /> +91 89399 41406
+          <p>Follow us :</p>
+                    <p>
+                      <FontAwesomeIcon icon={faFacebook} /> Facebook
                     </p>
                     <p>
-                      <FontAwesomeIcon icon={faMobileAlt} /> 0422 4541450
+                      <FontAwesomeIcon icon={faInstagram} /> Instagram
                     </p>
                     <p>
-                      <FontAwesomeIcon icon={faEnvelope} /> naveen.sankar@rudronilfinserv.com
+                      <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
                     </p>
         </div>
       </div>

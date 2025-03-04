@@ -59,6 +59,10 @@
     border-top: 1px solid #ddd;
     color: white;
   }
+
+  .social-footer{
+    display: flex;
+  }
   
   /* Responsive */
   @media (max-width: 768px) {

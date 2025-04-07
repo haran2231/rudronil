@@ -62,4 +62,23 @@ app.post("/submit", async (req, res) => {
   }
 });
 
+
+app.get("/api/news", async (req, res) => {
+  try {
+    const response = await fetch(
+      `https://newsapi.org/v2/top-headlines?category=business&country=in&apiKey=${process.env.NEWS_API_KEY}`
+    );
+    const data = await response.json();
+
+    if (!data.articles) {
+      return res.status(500).json({ message: "Failed to fetch articles", data });
+    }
+
+    res.json(data.articles);
+  } catch (err) {
+    console.error("Backend fetch error:", err);
+    res.status(500).json({ message: "Server Error" });
+  }
+});
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

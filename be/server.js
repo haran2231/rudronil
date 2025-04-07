@@ -83,7 +83,6 @@ app.get("/api/news", async (req, res) => {
   }
 });
 
-console.log("Hit /api/news");
 
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

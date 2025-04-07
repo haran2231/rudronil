@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
-require("dotenv").config();
+
 const fetch = require("node-fetch");
 
 
